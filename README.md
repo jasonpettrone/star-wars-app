@@ -1,13 +1,17 @@
 # Star Wars App
-----------------------------------------------------------------------
-:heavy_check_mark: Implemented
+Build an app that uses the https://swapi.dev/ API to display Star Wars character information. 
+
+Built using: React, Redux, Node, and GraphQL
+
+## Requirements
+
+:heavy_check_mark: Implemented 
 
 :x: Not implemented
 
-----------------------------------------------------------------------
-:heavy_check_mark: Consume the https://swapi.dev/ 'people' list API using Node and GraphQL.
+##
 
-:x: Build a simple webpage that presents a set of cards, one for each person returned from the API
+:heavy_check_mark: Consume the https://swapi.dev/ 'people' list API using Node and GraphQL.
 
 :x: Use the GraphQL operation to build a simple node page that presents a set of cards, one for each person in the order that the API returns them.
 
@@ -18,7 +22,6 @@
 :x: Allow the user to ‘load more’ for the next page of the API.
 
 # Getting Started with the App
----------------------------------------------------------------------
 Install NodeJS: https://nodejs.org/en/. For reference, I currently have version 14.15.4. Any version later than 14.0.0 should work.
 
 ## Starting the server
@@ -43,7 +46,7 @@ cd client
 npm install
 ```
 
-Once the packages install, the following command will start the client:
+Once the packages install, enter the following command to start the client:
 
 ```sh
 npm start
