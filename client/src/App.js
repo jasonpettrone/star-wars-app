@@ -1,8 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import { gql, useQuery } from "@apollo/client";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  Grid,
+  Container,
+} from "@material-ui/core";
 
 const GET_STAR_WARS_CHARACTERS = gql`
   query {
@@ -28,19 +34,36 @@ function App() {
 
   return (
     <div className="App">
-      {star_wars_characters.map((star_wars_character) => {
-        return (
-          <ul>
-            <li>--------------------------------</li>
-            <li>{star_wars_character.name}</li>
-            <li>{star_wars_character.height}</li>
-            <li>{star_wars_character.mass}</li>
-            <li>{star_wars_character.homeworld.name}</li>
-            <li>{star_wars_character.birth_year}</li>
-            <li>--------------------------------</li>
-          </ul>
-        );
-      })}
+      <Container maxWidth="lg">
+        <Grid container spacing={2}>
+          {star_wars_characters.map((star_wars_character) => {
+            return (
+              <Grid item xs={12} md={4}>
+                <Card>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {star_wars_character.name}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Height: {star_wars_character.height}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Mass: {star_wars_character.mass}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Origin: {star_wars_character.homeworld.name}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Birth year: {star_wars_character.birth_year}
+                    </Typography>
+                  </CardContent>
+                  <CardActions></CardActions>
+                </Card>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
     </div>
   );
 }

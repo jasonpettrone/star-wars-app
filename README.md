@@ -13,11 +13,11 @@ Built using: React, Redux, Node, and GraphQL
 
 :heavy_check_mark: Consume the https://swapi.dev/ 'people' list API using Node and GraphQL.
 
-:x: Use the GraphQL operation to build a simple node page that presents a set of cards, one for each person in the order that the API returns them.
+:heavy_check_mark: Use the GraphQL operation to build a simple node page that presents a set of cards, one for each person in the order that the API returns them.
 
-:x: On each ‘person’ card, only display the name, origin, height, mass, and birth date.
+:heavy_check_mark: On each ‘person’ card, only display the name, origin, height, mass, and birth date.
 
-:x: Make the card responsive to where a phone sized screen shows 1 card across and a desktop shows up to 3 cards across.
+:heavy_check_mark: Make the card responsive to where a phone sized screen shows 1 card across and a desktop shows up to 3 cards across.
 
 :x: Allow the user to ‘load more’ for the next page of the API.
 
