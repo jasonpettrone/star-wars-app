@@ -6,6 +6,7 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/",
