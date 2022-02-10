@@ -3,22 +3,32 @@ import { gql, useQuery } from "@apollo/client";
 import StarWarsCharacterCard from "./StarWarsCharacterCard";
 import { Spinner } from "react-bootstrap";
 
-const GET_STAR_WARS_CHARACTERS = gql`
-  query {
-    star_wars_characters {
-      name
-      height
-      mass
-      homeworld {
-        name
-      }
-      birth_year
-    }
-  }
-`;
+function StarWarsCharacterCardList(props) {
 
-function StarWarsCharacterCardList() {
-  const { data, error, loading } = useQuery(GET_STAR_WARS_CHARACTERS);
+  const GET_STAR_WARS_CHARACTERS = gql`
+    query Query($page: ID) {
+      star_wars_characters(page: $page) {
+        count
+        next
+        previous
+        results {
+          name
+          homeworld {
+            name
+          }
+          height
+          mass
+          birth_year
+        }
+      }
+    }
+  `;
+  
+  const { data, error, loading } = useQuery(GET_STAR_WARS_CHARACTERS, {
+    variables: {
+      page: props.page
+    }
+  });
 
   if (error) return <h1>Error Page</h1>;
   if (loading)
@@ -31,11 +41,12 @@ function StarWarsCharacterCardList() {
     );
 
   const { star_wars_characters } = data;
+  const { results } = star_wars_characters;
 
   return (
     <Container maxWidth="lg">
       <Grid container spacing={2}>
-        {star_wars_characters.map((star_wars_character) => {
+        {results.map((star_wars_character) => {
           return (
             <Grid item xs={12} md={4}>
               <StarWarsCharacterCard character={star_wars_character} />

@@ -6,16 +6,16 @@ exports.Query = {
         return fetch(`${baseURL}/people/${args.id}`).then(res => res.json())
     },
     star_wars_characters: (parent, args, context) => {
-        return fetch(`${baseURL}/people`)
+        if (args.page === null) args.page = 1;
+        return fetch(`${baseURL}/people/?page=${args.page}`)
             .then(res => res.json())
-            .then(json => json.results)
     },
     star_wars_planet: (parent, args, context) => {
         return fetch(`${baseURL}/planets/${args.id}`).then(res => res.json())
     },
     star_wars_planets: (parent, args, context) => {
-        return fetch(`${baseURL}/planets`)
+        if (args.page === null) args.page = 1;
+        return fetch(`${baseURL}/planets/?page=${args.page}`)
             .then(res => res.json())
-            .then(json => json.results)
     }
 }

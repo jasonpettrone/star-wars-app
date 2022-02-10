@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>Star Wars App</h1>
-      <StarWarsCharacterCardList />
+      <StarWarsCharacterCardList page={3} />
     </div>
   );
 }
