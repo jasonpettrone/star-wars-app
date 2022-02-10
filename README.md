@@ -52,3 +52,11 @@ Once the packages install, enter the following command to start the client:
 npm start
 ```
 Then open http://localhost:3000/ to see the app.
+
+# What the app looks like as of 2-6-2022
+
+## Desktop view:
+![image](https://user-images.githubusercontent.com/16530058/152715087-ac6c1d1e-805f-4bde-84e9-b2382aaece7d.png)
+
+## Mobile view (Samsung Galaxy S20 Ultra):
+![image](https://user-images.githubusercontent.com/16530058/152715200-0adaf68c-a029-410d-b64b-ed37ce3ad058.png)
