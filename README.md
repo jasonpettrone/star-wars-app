@@ -19,7 +19,7 @@ Built using: React, Redux, Node, and GraphQL
 
 :heavy_check_mark: Make the card responsive to where a phone sized screen shows 1 card across and a desktop shows up to 3 cards across.
 
-:x: Allow the user to ‘load more’ for the next page of the API.
+:heavy_check_mark: Allow the user to ‘load more’ for the next page of the API.
 
 # Getting Started with the App
 Install NodeJS: https://nodejs.org/en/. For reference, I currently have version 14.15.4. Any version later than 14.0.0 should work.
