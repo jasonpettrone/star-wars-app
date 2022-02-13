@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-.center-spinner {
+.center-middle {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.center-image {
+.center-image-top {
   display: block;
   margin-left: auto;
   margin-right: auto;

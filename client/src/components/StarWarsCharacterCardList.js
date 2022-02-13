@@ -1,9 +1,10 @@
 import { Container, Grid } from "@material-ui/core";
-import {Spinner } from "react-bootstrap"
+import { Spinner } from "react-bootstrap";
 import StarWarsCharacterCard from "./StarWarsCharacterCard";
 import { gql } from "@apollo/client";
 import useStarWarsCharacters from "../hooks/useStarWarsCharacters";
 import { useState } from "react";
+import StarWarsErrorPage from "./StarWarsErrorPage";
 
 const GET_STAR_WARS_CHARACTERS = gql`
   query Query($page: ID) {
@@ -29,7 +30,8 @@ function StarWarsCharacterCardList() {
   const { pagination_data, star_wars_characters, error, loading } =
     useStarWarsCharacters(GET_STAR_WARS_CHARACTERS, page);
 
-  if (error) return <h1>Error Page</h1>;
+  if (error)
+    return <StarWarsErrorPage />
   if (loading)
     return (
       <Container maxWidth="lg">
@@ -51,7 +53,7 @@ function StarWarsCharacterCardList() {
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         </button>
-        <div className="center-spinner">
+        <div className="center-middle">
           <Spinner
             hidden={page !== 1}
             animation="border"

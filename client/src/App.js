@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <img
-        className="center-image mb-5 mt-5"
+        className="center-image-top mb-5 mt-5"
         src={header}
         alt="Star Wars App"
       />
