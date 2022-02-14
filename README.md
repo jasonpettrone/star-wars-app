@@ -1,7 +1,7 @@
 # Star Wars App
 Build an app that uses the https://swapi.dev/ API to display Star Wars character information. 
 
-Built using: React, Redux, Node, and GraphQL
+Built using: React, Node, and GraphQL
 
 ## Requirements
 
